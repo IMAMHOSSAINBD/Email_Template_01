@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon-->
+    <link rel="icon" href="img/fevicon.png">
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+    <!-- ROBOT Font CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>HTML Email Template by IMAMHOSSAIN</title>
+    <style type="text/css">
+        /* CSS Style Sheet  */
+        /* Global CSS  */
+        body {
+            Margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--colorFour);
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        table {
+            border-spacing: 0;
+            max-width: 600px;
+        }
+
+        p,
+        h3,
+        h4 {
+            margin: .5rem;
+
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--colorOne);
+        }
+
+        button {
+            border: none;
+        }
+
+
+
+
+
+        /* Reusable CSS  */
+
+        /* ---- Color ----*/
+        :root {
+            --colorOne: #4393fa;
+
+            --colorTwo: #54bbff;
+
+            --colorThree: #f9f9f9;
+
+            --colorFour: #efefef;
+
+            --colorFive: #2f2f2f;
+
+            --colorSix: #9d9499;
+
+
+        }
+
+        .iconstyle i {
+            padding: .8rem;
+            border-radius: 100%;
+            background: var(--colorOne);
+            font-size: 2rem;
+            color: var(--colorFour);
+        }
+
+        .btn {
+            background: var(--colorFour);
+            color: var(--colorOne);
+            padding: .5rem 2rem;
+            border-radius: 1rem;
+            transition: 1s all;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn a {
+            transition: 1s all;
+        }
+
+        .btn:hover {
+            background: var(--colorOne);
+            color: var(--colorThree);
+        }
+
+        .btn:hover a {
+
+            color: var(--colorThree);
+        }
+
+
+
+
+        .nav {
+            padding: .5rem;
+            background-color: var(--colorFour);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav .navMenu {
+            padding-top: 3rem;
+        }
+
+        .nav .navMenu a {
+            padding: 0 1rem;
+            color: var(--colorFive);
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url(img/hero.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 3rem 0;
+            color: var(--colorFour);
+            text-align: center;
+        }
+
+        .hero p {
+            font-weight: 100;
+        }
+
+        .maintitle {
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        .discount {
+            animation: animate 5s infinite;
+            position: relative;
+            display: block;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--colorOne);
+            margin-bottom: 1.8rem;
+
+        }
+
+        .subTitle {
+            text-align: center;
+            font-weight: 300;
+        }
+
+
+        .teamTable tr td {
+            padding: .5rem;
+        }
+
+        .teamDiv .teamMem {
+            color: var(--colorFive);
+
+        }
+
+        .teamDiv .teamTitle {
+            color: var(--colorSix);
+            font-weight: 300;
+
+
+        }
+
+        .teamDiv p {
+            font-weight: 300;
+            font-size: .9rem;
+            text-align: justify;
+
+
+        }
+
+        .teamTable .column img {
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px gray;
+        }
+
+        .socialIcon {
+            text-align: center;
+            background-color: var(--colorFive);
+            padding: .5rem;
+            border-radius: 40px;
+        }
+
+        .socialIcon span {
+            padding: 0 .5rem;
+        }
+
+        .socialIcon span i {
+            transition: 1s all ease-in-out;
+            color: var(--colorFour);
+        }
+
+        .socialIcon span i:hover {
+            transform: scale(1.2);
+            color: var(--colorTwo);
+        }
+
+
+        .weDo,
+        .appDes,
+        .team {
+            padding: 2rem 0;
+        }
+
+        .footer {
+            background-color: var(--colorFive);
+            color: var(--colorThree) !important;
+            padding: 2.5rem 0;
+        }
+
+
+        .footerBtm {
+            text-align: center;
+            font-weight: 300;
+        }
+
+        /* Responsive  */
+
+        @media screen and (max-width: 600px) {}
+
+        @media screen and (max-width: 400px) {
+
+            .nav img {
+                width: 50px;
+            }
+
+            .nav .navMenu {
+                padding-top: 1rem;
+            }
+
+            .column {
+                float: left !important;
+                width: 100% !important;
+                display: block !important;
+
+            }
+
+            .nav .navMenu a {
+                padding: 0 .3rem;
+            }
+
+            .iconstyle {
+                margin-left: 1rem;
+            }
+
+            img {
+                text-align: center;
+                width: 100%;
+                margin: auto;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-------------------------------------------- Nav Menu------------------------------->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: auto; font-weight: bold;">
+        <thead>
+            <tr>
+                <td>
+                    <div class="nav">
+
+
+
+                        <div>
+                            <img src="img/logo.png" alt="" width="100px">
+
+                        </div>
+                        <div class="navMenu">
+                            <a href="#">About</a>
+                            <a href="#weDo">Product</a>
+                            <a href="#appDes">Apps</a>
+                            <a href="#team">Team</a>
+                        </div>
+
+
+
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <!----------------------------------------- END Nav Menu -------------------------->
+        <tbody>
+            <!----------------------------------------- Start Hero Section -------------------------->
+            <tr>
+
+                <td>
+                    <div class="hero">
+
+
+
+                        <h1 class="maintitle">Bes App <br> For Our Company</h1>
+
+
+                        <p><span class="discount" style="font-weight: bold; color: red; font-size: 2rem;">20%</span> OFF for Our Regular Client</p>
+
+                        <div>
+                            <button class="btn"><a href="#">Learn More</a></button>
+                        </div>
+
+
+
+
+
+                    </div>
+                </td>
+
+            </tr>
+            <!----------------------------------------- END Hero Section -------------------------->
+            <tr>
+                <td>
+                    <div class="weDo" id="weDo">
+
+                        <h3>What We Do ?</h3>
+                        <p class="subTitle">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        </p>
+
+                        <table>
+
+                            <tr>
+                                <td class="column">
+
+
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span class="iconstyle"><i class="lni lni-users"></i></span>
+                                            </td>
+                                            <td style="padding-left: .5rem;">
+                                                <p>User Friendly Interface</p>
+                                                <p style="font-weight: 300; font-size: .8rem;">Lorem Ipsum is simply dummy text of the printing</p>
+
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="iconstyle"><i class="lni lni-pencil"></i></span>
+                                            </td>
+                                            <td style="padding-left: .5rem;">
+                                                <p>Creative Design</p>
+                                                <p style="font-weight: 300; font-size: .8rem;">Lorem Ipsum is simply dummy text of the printing</p>
+
+
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="iconstyle"><i class="lni lni-bulb"></i></span>
+                                            </td>
+                                            <td style="padding-left: .5rem;">
+                                                <p>Effective Solution</p>
+                                                <p style="font-weight: 300; font-size: .8rem;">Lorem Ipsum is simply dummy text of the printing</p>
+
+
+
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                                </td>
+
+                                <td class="column">
+                                    <img src="img/mobile.png" width="300px" alt="">
+
+                                </td>
+
+
+
+
+                            </tr>
+                        </table>
+
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="appDes" id="appDes">
+                        <h3>Application Description </h3>
+                        <p class="subTitle">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        </p>
+
+
+                        <table>
+
+                            <tr>
+
+                                <td class="column">
+                                    <img src="img/iphone.png" width="300px" alt="">
+
+                                </td>
+
+
+
+                                <td class="column">
+                                    <h3>Features</h3>
+                                    <p class="subTitle" style="text-align: left">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <table>
+
+
+                                        <tr>
+
+                                            <p><i class="lni lni-paperclip"></i> Secure Service</p>
+                                            <p><i class="lni lni-paperclip"></i> Past Communiction</p>
+                                            <p><i class="lni lni-paperclip"></i> Lorem Ipsum Donor</p>
+                                            <p><i class="lni lni-paperclip"></i> Lorem Ipsum Donor</p>
+
+                                        </tr>
+
+                                    </table>
+                                    <div style="text-align: center;">
+                                        <button class="btn" style="border: 1px solid gray;"><a href="#">Read More</a></button>
+                                    </div>
+
+                                </td>
+
+
+
+
+
+
+                            </tr>
+                        </table>
+
+
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="team" id="team">
+                        <h3>Our Team </h3>
+                        <p class="subTitle">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                        </p>
+
+                        <table class="teamTable">
+                            <tr>
+                                <td class="column">
+                                    <img src="img/1.jpg" alt="">
+                                    <div class="teamDiv">
+                                        <h4 class="teamMem">Andy Colin</h4>
+                                        <p class="teamTitle">Android Developer</p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <div class="socialIcon">
+                                            <span><a href="#"><i class="lni lni-facebook-messenger"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-instagram-filled"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-twitter-original"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-linkedin-original"></i></a></span>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="column">
+                                    <img src="img/2.jpg" alt="">
+                                    <div class="teamDiv">
+                                        <h4 class="teamMem">Andy Colin</h4>
+                                        <p class="teamTitle">Android Developer</p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <div class="socialIcon">
+                                            <span><a href="#"><i class="lni lni-facebook-messenger"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-instagram-filled"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-twitter-original"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-linkedin-original"></i></a></span>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="column">
+                                    <img src="img/3.jpg" alt="">
+                                    <div class="teamDiv">
+                                        <h4 class="teamMem">Andy Colin</h4>
+                                        <p class="teamTitle">Android Developer</p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                        <div class="socialIcon">
+                                            <span><a href="#"><i class="lni lni-facebook-messenger"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-instagram-filled"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-twitter-original"></i></a></span>
+                                            <span><a href="#"><i class="lni lni-linkedin-original"></i></a></span>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <!-- Footer Starts -->
+
+
+                <td>
+                    <div class="footer">
+                        <h3>The End of Email ? </h3>
+                        <p class="subTitle">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                        </p>
+
+
+                        <div class="socialIcon">
+                            <span><a href="#"><i class="lni lni-facebook-messenger"></i></a></span>
+                            <span><a href="#"><i class="lni lni-instagram-filled"></i></a></span>
+                            <span><a href="#"><i class="lni lni-twitter-original"></i></a></span>
+                            <span><a href="#"><i class="lni lni-linkedin-original"></i></a></span>
+
+                        </div>
+
+                        <div class="footerBtm">
+                            <p>Copyright Imamhossain, 2021, Chittagong, Bangladesh </p>
+                            <p>Unsubscribe Here</p>
+                        </div>
+                    </div>
+
+                </td>
+
+                <!-- Footer Ends -->
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+</body>
+
+</html>
